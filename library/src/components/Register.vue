@@ -1,11 +1,23 @@
 <template>
-  <div>
-    <h1>Register</h1>
-    <input type="email" name="email" v-model="email" placeholder="Email"/> <br>
-    <input type="password" name="password" v-model="password" placeholder="Password"/> <br>
-    <div class="error" v-html="error"/> <br>
-    <button @click="register">Button</button>
-  </div>
+  <vs-row vs-justify="center">
+    <vs-col type="flex" vs-justify="center" vs-align="center" vs-lg="3" vs-sm="6" vs-xs="10">
+      <vs-card actionable>
+        <div slot="header">
+          <h3>Register</h3>
+        </div>
+        <div class="centerx">
+          <vs-row vs-justify="center">
+            <vs-input class="input" size="large" type="email" name="email" v-model="email" placeholder="Email"/>
+            <br>
+            <vs-input class="input" size="large" type="password" name="password" v-model="password" placeholder="Password"/>
+          </vs-row>
+           <vs-row vs-justify="center">
+            <vs-button size="large" type="gradient" color="primary" @click="register">Register</vs-button>
+          </vs-row>
+        </div>
+      </vs-card>
+    </vs-col>
+  </vs-row>
 </template>
 
 <script>
@@ -37,5 +49,8 @@ export default {
 <style scoped>
 .error {
   color: red;
+}
+.input{
+  padding: 0 0 10pt 0;
 }
 </style>

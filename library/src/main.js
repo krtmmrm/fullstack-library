@@ -4,11 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+import Vuesax from 'vuesax'
 import 'vuetify/dist/vuetify.min.css'
+import 'vuesax/dist/vuesax.css'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
+
+Vue.use(Vuesax)
 
 /* eslint-disable no-new */
 new Vue({
